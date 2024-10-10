@@ -1,0 +1,252 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    justify-content: center;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front{
+    background-color: transparent;
+    background-image: url(Images/home/me-1.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    justify-content: center;
+    animation: me 10s infinite ease-in-out;
+  }
+  /* Style the back side */
+  .flip-card-back {
+    background-color: white;
+    color: rgb(255, 50, 211);
+    transform: rotateY(180deg);
+    position: absolute;
+    text-align: center;
+  }
+
+
+  /* keyframes */
+  @keyframes me{
+    0%
+    {
+        background-image: url(Images/home/me-2.png);
+    }
+    20%
+    {
+        background-image: url(Images/home/me-3.png);
+    }
+    40%
+    {
+        background-image: url(Images/home/me-2.png);
+    }
+    60%
+    {
+        background-image: url(Images/home/me-3.png);
+    }
+    80%
+    {
+        background-image: url(Images/home/me-2.png);
+    }
+    100%
+    {
+        background-image: url(Images/home/me-3.png);
+    }
+  }
+
+/* CONTAINERS AND THE KEYFRAME ANIMATIONS */
+
+
+  .ambience-images{
+    background-color: transparent;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    background-image: url(Images/ambience/a4.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    justify-content: center;
+    animation: ambience .5s infinite ease-in-out;
+
+  }
+
+  @keyframes ambience{
+    0%
+    {
+        background-image: url(Images/ambience/a1.png);
+    }
+    20%
+    {
+        background-image: url(Images/ambience/a2.png);
+    }
+    40%
+    {
+        background-image: url(Images/ambience/a3.png);
+    }
+    60%
+    {
+        background-image: url(Images/ambience/a5.png);
+    }
+    80%
+    {
+        background-image: url(Images/ambience/a6.png);
+    }
+    100%
+    {
+        background-image: url(Images/ambience/a7.png);
+    }
+  }
+
+  .enchantment-images{
+    background-color: transparent;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    background-image: url(Images/enchantment/e-1.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    justify-content: center;
+    animation: enchantment 3s infinite ease-in-out;
+
+  }
+
+  @keyframes enchantment{
+    0%
+    {
+        background-image: url(Images/enchantment/e-1.png);
+    }
+    20%
+    {
+        background-image: url(Images/enchantment/e-2.png);
+    }
+    40%
+    {
+        background-image: url(Images/enchantment/e-3.png);
+    }
+    60%
+    {
+        background-image: url(Images/enchantment/e-4.png);
+    }
+    80%
+    {
+        background-image: url(Images/enchantment/e-5.png);
+    }
+    100%
+    {
+        background-image: url(Images/enchantment/e-1.png);
+    }
+  }
+
+  .catharsis-images{
+    background-color: transparent;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    background-image: url(Images/catharsis/c-1.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    justify-content: center;
+    animation: catharsis .02s infinite ease-in-out;
+
+  }
+
+  @keyframes catharsis{
+    0%
+    {
+      background-image: url(Images/catharsis/c-1.png);
+    }
+    20%
+    {
+      background-image: url(Images/catharsis/c-2.png);
+    }
+    40%
+    {
+      background-image: url(Images/catharsis/c-3.png);
+    }
+    60%
+    {
+      background-image: url(Images/catharsis/c-4.png);
+    }
+    80%
+    {
+      background-image: url(Images/catharsis/c-5.png);
+    }
+    100%
+    {
+      background-image: url(Images/catharsis/c-6.png);
+    }
+  }
+
+  .dream-images{
+    background-color: transparent;
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    background-image: url(Images/dreams/d-1.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    justify-content: center;
+    animation: dreams 10s infinite ease-in-out;
+
+  }
+
+  @keyframes dreams{
+    0%
+    {
+      background-image: url(Images/dreams/d-1.png);
+    }
+    20%
+    {
+      background-image: url(Images/dreams/d-2.png);
+    }
+    40%
+    {
+      background-image: url(Images/dreams/d-3.png);
+    }
+    60%
+    {
+      background-image: url(Images/dreams/d-4.png);
+    }
+    80%
+    {
+      background-image: url(Images/dreams/d-5.png);
+    }
+    100%
+    {
+      background-image: url(Images/dreams/d-6.png);
+    }
+  }
+/* TOOL TIP FOR HOVERING OVER IMAGES*/
